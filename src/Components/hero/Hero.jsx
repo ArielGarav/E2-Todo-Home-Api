@@ -5,7 +5,7 @@ import { HeroContainerStyled } from "./HeroStyles";
 function Hero() {
   return (
     <HeroContainerStyled>
-      <Title>E2 PokeApi + TodoList + Routes</Title>
+      <Title>E3 PokeApi + TodoList + Routes</Title>
     </HeroContainerStyled>
   );
 }

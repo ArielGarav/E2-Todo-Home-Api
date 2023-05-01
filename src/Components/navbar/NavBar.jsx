@@ -3,12 +3,15 @@ import { MdCatchingPokemon, MdListAlt, MdOutlineHome } from "react-icons/md";
 import { LinkContainer, LinkItemStyled, NavContainer } from "./Navbar_Styles";
 
 import { useNavigate } from "react-router";
-import { TodoContext } from "../../pages/CreateCONTEXT/TodoContext";
-import { useContext } from "react";
+import { useSelector } from "react-redux";
 
 function Navbar() {
-  const { hasIncompleteTodos } = useContext(TodoContext);
   const navigate = useNavigate();
+  const taskList = useSelector((state) => state.tasks);
+
+  const incompleteTasks = taskList.filter((task) => !task.completed);
+  const hasIncompleteTasks = incompleteTasks.length > 0;
+
   return (
     <>
       <NavContainer>
@@ -18,7 +21,7 @@ function Navbar() {
             navigate("/");
           }}
         >
-          Entrega 2°
+          Entrega 3°
         </h2>
         <LinkContainer>
           <LinkItemStyled to={"/"}>
@@ -30,8 +33,8 @@ function Navbar() {
             <MdCatchingPokemon />
           </LinkItemStyled>
           <LinkItemStyled
-            className={hasIncompleteTodos ? "incomplete" : ""}
             to={"TodoList"}
+            className={hasIncompleteTasks ? "incomplete" : ""}
           >
             To-Do-List <MdListAlt />
           </LinkItemStyled>

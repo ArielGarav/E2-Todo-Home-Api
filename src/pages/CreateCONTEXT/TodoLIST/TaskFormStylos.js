@@ -1,8 +1,17 @@
 import styled from "styled-components";
+export const ContainerTotal = styled.div`
+  width: 100vw;
+  height: 80vh;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+`;
 export const ContainerPrincipal = styled.div`
   width: 100vw;
   min-width: 320px;
-  min-height: 80vh;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -39,24 +48,7 @@ export const ButtonAdd = styled.button`
     transition-duration: 0.1s;
   }
 `;
-export const ButtonDelete = styled.button`
-  display: inline-block;
-  outline: 0;
-  cursor: pointer;
-  border-radius: 40px;
-  border: 2px solid #ff4742;
-  color: #fff;
-  background-color: #ff4742;
-  padding: 8px;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px,
-    rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
-  font-weight: 800;
-  font-size: 16px;
-  height: 42px;
-  :hover {
-    color: black;
-  }
-`;
+
 export const Input = styled.input`
   padding: 6px 12px;
   background: rgb(31, 32, 35);
@@ -72,28 +64,4 @@ export const Input = styled.input`
     box-shadow: none;
     border-color: rgb(100, 153, 255);
   }
-`;
-export const Ul = styled.ul`
-  color: white;
-  border-radius: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 0px;
-`;
-export const LI = styled.li`
-  background-color: white;
-  color: black;
-  border-radius: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  width: 100%;
-  justify-content: end;
-  gap: 40px;
-  border: 1px solid black;
-  margin: 5px;
 `;
